@@ -1,3 +1,6 @@
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -19,5 +22,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
         if vim.fn.argv(0) == "" then
             vim.cmd('Ex')
         end
+    end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    callback = function()
+        vim.lsp.buf.format()
     end,
 })

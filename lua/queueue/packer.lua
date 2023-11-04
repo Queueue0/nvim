@@ -39,4 +39,5 @@ return require('packer').startup(function(use)
 	}
 
 	use { "cohama/lexima.vim" }
+	use {'theprimeagen/harpoon'}
 end)

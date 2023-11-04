@@ -4,6 +4,9 @@ vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.list = true
+vim.o.listchars = 'tab:  '
+
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 

@@ -43,4 +43,5 @@ return require('packer').startup(function(use)
 	use { "cohama/lexima.vim" }
 	use {'theprimeagen/harpoon'}
 	use 'feline-nvim/feline.nvim'
+	use 'lewis6991/gitsigns.nvim'
 end)

@@ -13,13 +13,13 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "]e", function() vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR}) end, opts)
   vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+  vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'rust_analyzer', 'gopls', 'pylsp'},
+  ensure_installed = {'tsserver', 'rust_analyzer', 'gopls', 'pyright'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
@@ -64,4 +64,17 @@ lspconfig.emmet_ls.setup({
         },
       },
     }
+})
+
+lspconfig.pyright.setup({
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "off",
+        diagnosticSeverityOverrides = {
+          strictParameterNoneValue = false,
+        }
+      }
+    }
+  }
 })

@@ -44,4 +44,8 @@ return require('packer').startup(function(use)
 	use {'theprimeagen/harpoon'}
 	use 'feline-nvim/feline.nvim'
 	use 'lewis6991/gitsigns.nvim'
+
+	use { "jose-elias-alvarez/null-ls.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	}
 end)

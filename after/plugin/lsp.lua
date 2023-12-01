@@ -66,15 +66,3 @@ lspconfig.emmet_ls.setup({
     }
 })
 
-lspconfig.pyright.setup({
-  settings = {
-    python = {
-      analysis = {
-        typeCheckingMode = "off",
-        diagnosticSeverityOverrides = {
-          strictParameterNoneValue = false,
-        }
-      }
-    }
-  }
-})

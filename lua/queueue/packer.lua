@@ -17,6 +17,8 @@ return require('packer').startup(function(use)
 
 	use { "catppuccin/nvim", as = "catppuccin" }
 
+	use 'shaunsingh/nord.nvim'
+
 	use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
 
 	use { "tpope/vim-fugitive" }
@@ -48,4 +50,8 @@ return require('packer').startup(function(use)
 	use { "jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 	}
+
+	use { "NoahTheDuke/vim-just" }
+
+	use { "rebelot/kanagawa.nvim" }
 end)

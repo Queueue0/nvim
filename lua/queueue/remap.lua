@@ -25,4 +25,4 @@ vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev)
 
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format)
 
-vim.keymap.set("n", "<leader>zm", ":ZenMode<CR>")
+vim.keymap.set("n", "<leader>zz", ":ZenMode<CR>")

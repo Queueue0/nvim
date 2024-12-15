@@ -20,6 +20,7 @@ vim.opt.colorcolumn = "80"
 vim.opt.cursorline = true
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()

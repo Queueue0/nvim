@@ -76,6 +76,17 @@ require('lazy').setup({
 	{
 		"folke/zen-mode.nvim",
 		opts = {
+			plugins = {
+				options = {
+					enabled = true,
+				},
+				twilight = { enabled = true },
+			},
+		}
+	},
+	{
+		"folke/twilight.nvim",
+		opts = {
 
 		}
 	},

@@ -72,4 +72,11 @@ require('lazy').setup({
 	"NoahTheDuke/vim-just",
 
 	"rebelot/kanagawa.nvim",
+
+	{
+		"folke/zen-mode.nvim",
+		opts = {
+
+		}
+	},
 })

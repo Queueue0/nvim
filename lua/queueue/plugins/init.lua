@@ -45,7 +45,7 @@ return {
 		branch = "harpoon2",
 		dependencies = {{"nvim-lua/plenary.nvim"}}
 	},
-	'feline-nvim/feline.nvim',
+	'freddiehaddad/feline.nvim',
 	'nvim-tree/nvim-web-devicons',
 	'lewis6991/gitsigns.nvim',
 

@@ -22,6 +22,8 @@ vim.opt.cursorline = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.opt.linebreak = true
+
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
         if vim.fn.argv(0) == "" then

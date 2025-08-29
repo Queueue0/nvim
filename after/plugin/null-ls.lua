@@ -4,8 +4,6 @@ if not null_ls_ok then
 end
 
 local sources = {
-  -- python
-  null_ls.builtins.formatting.autopep8,
 }
 
 null_ls.setup({ sources = sources })

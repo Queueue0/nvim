@@ -5,14 +5,15 @@ return {
 		config = true,
 	},
 	{
-		'nvim-telescope/telescope.nvim', version = '0.1.8',
+		'nvim-telescope/telescope.nvim',
+		version = '0.1.8',
 		-- or                            , branch = '0.1.x',
-		dependencies = { {'nvim-lua/plenary.nvim'} }
+		dependencies = { { 'nvim-lua/plenary.nvim' } }
 	},
 
 	'nvim-telescope/telescope-ui-select.nvim',
 
-	{ "catppuccin/nvim", name = "catppuccin" },
+	{ "catppuccin/nvim",                 name = "catppuccin" },
 
 	'shaunsingh/nord.nvim',
 
@@ -27,15 +28,15 @@ return {
 		branch = 'v3.x',
 		dependencies = {
 			--- Uncomment these if you want to manage LSP servers from neovim
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
+			{ 'williamboman/mason.nvim' },
+			{ 'williamboman/mason-lspconfig.nvim' },
 
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},
+			{ 'neovim/nvim-lspconfig' },
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'L3MON4D3/LuaSnip'},
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'L3MON4D3/LuaSnip' },
 		}
 	},
 
@@ -43,13 +44,13 @@ return {
 	{
 		'theprimeagen/harpoon',
 		branch = "harpoon2",
-		dependencies = {{"nvim-lua/plenary.nvim"}}
+		dependencies = { { "nvim-lua/plenary.nvim" } }
 	},
-	'freddiehaddad/feline.nvim',
 	'nvim-tree/nvim-web-devicons',
 	'lewis6991/gitsigns.nvim',
 
-	{ "jose-elias-alvarez/null-ls.nvim",
+	{
+		"nvimtools/none-ls.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
@@ -73,5 +74,19 @@ return {
 		opts = {
 
 		}
+	},
+
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && yarn install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 }
